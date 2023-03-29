@@ -1,0 +1,1 @@
+<view class="content"><view class="wx-style"></view><swiper-vue vue-id="8dd740cc-1" bind:__l="__l"></swiper-vue><recommend vue-id="8dd740cc-2" bind:__l="__l"></recommend><card vue-id="8dd740cc-3" title="猜你喜欢" bind:__l="__l"></card><commodity-list vue-id="8dd740cc-4" bind:__l="__l"></commodity-list></view>

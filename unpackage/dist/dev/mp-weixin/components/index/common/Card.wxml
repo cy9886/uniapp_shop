@@ -1,0 +1,1 @@
+<view class="card data-v-a72ac028"><view class="data-v-a72ac028">-</view><block wx:if="{{$slots.default}}"><slot></slot></block><block wx:else><view class="title data-v-a72ac028">{{title}}</view></block><view class="data-v-a72ac028">-</view></view>
