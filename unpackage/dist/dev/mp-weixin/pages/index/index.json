@@ -5,7 +5,11 @@
   "usingComponents": {
     "swiper-vue": "/components/index/index",
     "recommend": "/components/index/Recommend",
-    "card": "/components/index/common/Card",
-    "commodity-list": "/components/index/common/CommodityList"
+    "card": "/components/common/Card",
+    "commodity-list": "/components/common/CommodityList",
+    "banner": "/components/index/Banner",
+    "icons": "/components/index/Icons",
+    "hot": "/components/index/Hot",
+    "shop": "/components/index/Shop"
   }
 }

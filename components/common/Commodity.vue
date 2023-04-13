@@ -1,9 +1,9 @@
 <template>
-	<view class="commodity">
-		<view class="commodity_item" v-for="item in commodituList" :key="item.id">
-			<image class="commodity_img" :src="item.imgUrl" mode=""></image>
+	<view class="commodity" :style="'flex-wrap:'+ wrap + ';'">
+		<view class="commodity_item" v-for="item in commodityList" :key="item.id" :style="'width:' + itemW + ';'">
+			<image class="commodity_img" :src="item.imgUrl" mode="" :style="'height:' + bigH + ';' "></image>
 			<view class="commodity_content">
-				<text class="commodity_name">{{item.name}}</text>
+				<text class="commodity_name" :style="'font-size:' + nameSize + ';'">{{item.name}}</text>
 				<view class="prince">
 					<text class="pprince">￥{{item.pprince}}</text>
 					<text class="oprince">￥{{item.oprince}}</text>
@@ -17,12 +17,27 @@
 <script>
 	export default {
 		props: {
-			commodituList: {
+			commodityList: {
 				type: Array,
 				default: () => {
 					return []
 				}
-
+			},
+			itemW: {
+				type: String,
+				default: '375rpx'
+			},
+			bigH: {
+				type: String,
+				default: '375rpx'
+			},
+			wrap: {
+				type: String,
+				default: 'wrap'
+			},
+			nameSize:{
+				type:String,
+				default:'26rpx'
 			}
 		}
 	}
@@ -31,7 +46,6 @@
 <style lang="scss" scoped>
 	.commodity {
 		display: flex;
-		flex-wrap: wrap;
 
 		.commodity_item {
 			width: 375rpx;
@@ -39,7 +53,6 @@
 
 			.commodity_img {
 				width: 100%;
-				height: 375rpx;
 			}
 
 			.commodity_content {

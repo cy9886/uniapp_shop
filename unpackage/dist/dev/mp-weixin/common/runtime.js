@@ -105,11 +105,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"components/index/Recommend":1,"components/index/common/Card":1,"components/index/index":1,"components/index/common/Commodity":1};
+/******/ 		var cssChunks = {"components/index/Shop":1,"components/common/Card":1,"components/index/Banner":1,"components/index/Icons":1,"components/index/Recommend":1,"components/index/index":1,"components/common/Commodity":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"components/index/common/CommodityList":"components/index/common/CommodityList","components/index/Recommend":"components/index/Recommend","components/index/common/Card":"components/index/common/Card","components/index/index":"components/index/index","components/index/common/Commodity":"components/index/common/Commodity"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"components/common/CommodityList":"components/common/CommodityList","components/index/Hot":"components/index/Hot","components/index/Shop":"components/index/Shop","components/common/Card":"components/common/Card","components/index/Banner":"components/index/Banner","components/index/Icons":"components/index/Icons","components/index/Recommend":"components/index/Recommend","components/index/index":"components/index/index","components/common/Commodity":"components/common/Commodity"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {

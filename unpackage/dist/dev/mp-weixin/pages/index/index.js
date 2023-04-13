@@ -135,7 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(uni) {
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -152,31 +152,100 @@ var Recommend = function Recommend() {
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var Card = function Card() {
-  __webpack_require__.e(/*! require.ensure | components/index/common/Card */ "components/index/common/Card").then((function () {
-    return resolve(__webpack_require__(/*! @/components/index/common/Card.vue */ 73));
+  __webpack_require__.e(/*! require.ensure | components/common/Card */ "components/common/Card").then((function () {
+    return resolve(__webpack_require__(/*! @/components/common/Card.vue */ 73));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var CommodityList = function CommodityList() {
-  Promise.all(/*! require.ensure | components/index/common/CommodityList */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/index/common/CommodityList")]).then((function () {
-    return resolve(__webpack_require__(/*! @/components/index/common/CommodityList.vue */ 85));
+  Promise.all(/*! require.ensure | components/common/CommodityList */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/common/CommodityList")]).then((function () {
+    return resolve(__webpack_require__(/*! @/components/common/CommodityList.vue */ 80));
+  }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+};
+var Banner = function Banner() {
+  __webpack_require__.e(/*! require.ensure | components/index/Banner */ "components/index/Banner").then((function () {
+    return resolve(__webpack_require__(/*! @/components/index/Banner.vue */ 86));
+  }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+};
+var Icons = function Icons() {
+  __webpack_require__.e(/*! require.ensure | components/index/Icons */ "components/index/Icons").then((function () {
+    return resolve(__webpack_require__(/*! @/components/index/Icons.vue */ 93));
+  }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+};
+var Hot = function Hot() {
+  Promise.all(/*! require.ensure | components/index/Hot */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/index/Hot")]).then((function () {
+    return resolve(__webpack_require__(/*! @/components/index/Hot.vue */ 100));
+  }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+};
+var Shop = function Shop() {
+  Promise.all(/*! require.ensure | components/index/Shop */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/index/Shop")]).then((function () {
+    return resolve(__webpack_require__(/*! @/components/index/Shop.vue */ 108));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var _default = {
   data: function data() {
     return {
-      title: 'Hello'
+      title: 'Hello',
+      topBar: [{
+        name: '推荐'
+      }, {
+        name: '运动户外'
+      }, {
+        name: '服饰内衣'
+      }, {
+        name: '鞋靴箱包'
+      }, {
+        name: '美妆个护'
+      }, {
+        name: '家具数码'
+      }, {
+        name: '视频母婴'
+      }],
+      topBarIndex: 0,
+      // 选中索引
+      scrollIndedx: 'top0',
+      contentHeight: 0 // 内容快的可视高度
     };
   },
+
   components: {
     SwiperVue: SwiperVue,
     Recommend: Recommend,
     Card: Card,
-    CommodityList: CommodityList
+    CommodityList: CommodityList,
+    Banner: Banner,
+    Icons: Icons,
+    Hot: Hot,
+    Shop: Shop
   },
   onLoad: function onLoad() {},
-  methods: {}
+  onReady: function onReady() {
+    var _this = this;
+    // 页面加载完
+    var view = uni.createSelectorQuery().select('.swiper-item');
+    view.boundingClientRect(function (data) {
+      _this.contentHeight = data.height;
+    }).exec();
+  },
+  methods: {
+    /*
+    	切换tab栏
+    */
+    changeTap: function changeTap(index) {
+      if (this.topBarIndex === index) return;
+      this.topBarIndex = index;
+      this.scrollIndedx = 'top' + index;
+    },
+    /*
+    	切换滑块
+    */
+    onChangeTop: function onChangeTop(e) {
+      var current = e.detail.current;
+      this.changeTap(current);
+    }
+  }
 };
 exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 

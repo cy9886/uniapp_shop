@@ -7,6 +7,7 @@
 				"navigationBarBackgroundColor":"#fff",
 				"navigationStyle":"custom",
 				"app-plus": {
+					"scrollIndicator": "none",
 					"titleNView": {
 						"buttons": [
 							{

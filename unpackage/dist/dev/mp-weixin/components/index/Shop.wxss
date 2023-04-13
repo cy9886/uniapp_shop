@@ -24,21 +24,15 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.wx-style {
-  height: 150rpx;
-}
-.scroll_content {
+.shop_item .shop_img.data-v-aaa41fa4 {
   width: 100%;
-  height: 80rpx;
+  height: 350rpx;
+}
+.shop_item .scroll_content.data-v-aaa41fa4 {
+  width: 100%;
   white-space: nowrap;
 }
-.scroll_content .scroll_item {
+.shop_item .scroll_content .scroll_item.data-v-aaa41fa4 {
   display: inline-block;
-  padding: 10rpx 30rpx;
-  font-size: 36rpx;
-}
-.scroll_content .f-active-color {
-  padding: 10rpx 0;
-  border-bottom: 6rpx solid #49bdfb;
 }
 
