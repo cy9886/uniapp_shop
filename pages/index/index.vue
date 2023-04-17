@@ -83,6 +83,13 @@
 			Shop
 		},
 		onLoad() {
+			uni.request({
+				url:'https://192.168.0.103:3000/api/test',
+				method:'GET',
+				success: (res) => {
+					console.log(res);
+				}
+			})
 
 		},
 		onReady() { // 页面加载完

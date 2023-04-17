@@ -217,7 +217,15 @@ var _default = {
     Hot: Hot,
     Shop: Shop
   },
-  onLoad: function onLoad() {},
+  onLoad: function onLoad() {
+    uni.request({
+      url: 'https://192.168.0.103:3000/api/test',
+      method: 'GET',
+      success: function success(res) {
+        console.log(res);
+      }
+    });
+  },
   onReady: function onReady() {
     var _this = this;
     // 页面加载完
